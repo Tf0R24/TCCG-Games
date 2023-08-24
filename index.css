@@ -1,0 +1,67 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+.wrapper{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.gameTile{
+    font-family: 'Nunito Sans', sans-serif;
+    margin: 1vw;
+    background-color: transparent;
+    width: 300px;
+    height: 300px;
+    perspective: 1000px;
+}
+
+.gameTileImage{
+    border-radius: 20px;
+}
+
+.gameTileInner{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    border-radius: 20px;
+}
+
+.gameTile:hover .gameTileInner{
+    transform: rotateY(180deg);
+}
+
+.gameTileFront, .gameTileBack{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 20px;
+}
+
+.gameTileFront{
+  background-color: #bbb;
+  color: black;
+}
+
+.gameTileBack{
+  background-color: #7D7D7D;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+.gameTileHeading{
+    font-size: 2.5vw;
+    line-height: 2.5vw;
+    padding: 1vh;
+}
+
+.gameTileDesc{
+    padding: 1vh;
+}
